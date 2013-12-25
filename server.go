@@ -17,7 +17,7 @@ func main() {
   }))
 
   m.Get("/", func(r render.Render) {
-    r.HTML(200, "index", "blandbeard")
+    r.HTML(200, "index", nil)
   })
 
   m.Post("/registrations", binding.Bind(Registration{}), func(registration Registration, r render.Render) {
